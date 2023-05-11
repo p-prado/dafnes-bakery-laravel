@@ -1,0 +1,865 @@
+/* CSS RESET */
+
+/* makes sizing simpler
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+} */
+
+/* remove default spacing */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* dark mode user-agent-styles */
+
+html {
+    color-scheme: dark light;
+}
+
+/* min body height
+   improve text rendering */
+
+body {
+    /* min-height: 100vh; */
+    -webkit-font-smoothing: antialiased;
+}
+
+/* responsive images/videos */
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+/* Remove built-in form typography styles */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* CSS RESET END */
+
+/* PRE DEFINED CLASSES */
+
+:root {
+
+    font-size: 16px;
+
+    --font-family-header: 'Dancing Script', cursive;
+    --font-family-body: 'Montserrat', sans-serif;
+    --color-primary: #3e064c;
+    --color-primary-light: #ae8da7;
+    --color-primary-light-hover: #cfafc8;
+    --color-primary-hover: #713181;
+    --color-text-light: #fff;
+    --color-text-light-hover: #ae8da7;
+    --color-text-dark: #1e0d33;
+    --color-text-dark-hover: #3e064c;
+    --color-text-primary-dark: #3e064c;
+    --color-background-white: #fff;
+    --color-background-light: #efeeef;
+    --color-background-light-purple: #ae8da7;
+    --color-background-dark: #1e0d33;
+    --size-main-body-text: 1.2rem;
+
+    --box-shadow-light: 4px 4px 10px 0px rgba(0, 0, 0, 0.2);
+    --text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+
+    --card-border-radius: 20px;
+    --button-border-radius: 5px;
+
+    --section-padding: 8rem;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background-light);
+    color: var(--color-text-dark);
+    /* overflow-x: hidden; */
+}
+
+p,
+a,
+table {
+    font-family: var(--font-family-body);
+}
+
+p,
+a {
+    font-size: var(--size-main-body-text);
+    line-height: 1.7rem;
+}
+
+h1,
+h2,
+h1 a,
+h2 a {
+    font-family: var(--font-family-header);
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 1.7rem;
+}
+
+h3,
+h4,
+h5 {
+    font-family: 'Montserrat Thin', sans-serif;
+}
+
+nav {
+    padding: 0;
+}
+
+/* SECTION HEADINGS */
+
+h2.section-heading {
+    color: var(--color-text-primary-dark);
+    margin-block: 0 3.5rem;
+    margin-inline: 0;
+}
+
+/* UTILITY */
+
+.container {
+    width: 1400px;
+    max-width: 90%;
+    margin: auto;
+}
+
+/* BUTTONS */
+.button-primary {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color-text-light);
+    font-size: var(--size-main-body-text);
+    font-weight: 300;
+    padding: 0.9rem 1.8rem;
+    background-color: var(--color-primary);
+    border-radius: var(--button-border-radius);
+    text-shadow: none;
+}
+
+.button-primary:hover {
+    background-color: var(--color-primary-hover);
+}
+
+/* SECTION: HEADER */
+
+/* TRANSPARENT HEADER */
+
+.transparent-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.transparent-header h2 {
+    font-size: 2rem;
+    padding-block: 20px;
+}
+
+.transparent-header a {
+    text-shadow: var(--text-shadow);
+}
+
+.transparent-header h2 a {
+    text-decoration: none;
+    color: var(--color-text-light);
+}
+
+.transparent-header nav {
+    height: 100%;
+}
+
+.transparent-navigation {
+    height: 100%;
+}
+
+
+.transparent-navigation li {
+    display: inline-block;
+    /* margin-block: auto; */
+
+}
+
+.transparent-navigation a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    padding: 30px 20px;
+    border-bottom: 3px solid transparent;
+}
+
+.transparent-navigation a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-bottom: 3px solid var(--color-primary-hover);
+    text-shadow: none;
+}
+
+.transparent-navigation a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-bottom: 3px solid var(--color-primary);
+    text-shadow: none;
+}
+
+/* HIDE THE MOBILE NAV ICON */
+
+.transparent-navigation .icon {
+    display: none;
+}
+
+/* SECTION: HERO */
+
+.hero {
+    text-align: center;
+    color: var(--color-text-light);
+    background-color: var(--color-background-dark);
+    background-image:
+        linear-gradient(0deg, rgba(24, 16, 26, 0.4) 0%, rgba(24, 16, 26, 0.3) 100%),
+        url('https://cdn.pixabay.com/photo/2016/05/05/14/57/cake-1374058_960_720.jpg');
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
+}
+
+.hero-content {
+    text-shadow: var(--text-shadow);
+    display: flex;
+    height: 37rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-subtitle {
+    margin-block: 2.2rem;
+}
+
+
+/* SECTION: PRODUCTOS DESTACADOS */
+
+.featured-section {
+    background-color: var(--color-background-light);
+    background-image: url("../assets/dafnes\ bakery\ web\ logos-10.png");
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+    color: var(--color-text-dark);
+    padding-block: var(--section-padding);
+    text-align: center;
+}
+
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-track {
+    display: flex;
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card {
+    transition: transform 0.3s ease-in-out;
+    flex-basis: calc(100%/3 - 1.5rem);
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin: 0.75rem 0.75rem;
+    box-shadow: var(--box-shadow-light);
+    background-color: var(--color-background-white);
+    border-radius: var(--card-border-radius);
+}
+
+.card-img-container {
+    border-radius: var(--card-border-radius) var(--card-border-radius) 0 0;
+    overflow: hidden;
+}
+
+/* TODO CROP ALL IMAGES FOR THIS SECTION WITH A 3/2 ASPECT RATIO */
+.card-img {
+    border-radius: var(--card-border-radius) var(--card-border-radius) 0px 0px;
+    transition: 0.75s transform ease-in-out;
+    max-height: 100%;
+    aspect-ratio: 3/2;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: center;
+    background-color: var(--color-background-white);
+    max-height: 100%;
+    padding: 2rem;
+    border-radius: 0 0 var(--card-border-radius) var(--card-border-radius);
+}
+
+.card-body * {
+    margin-block: 10px;
+}
+
+
+/* Slider Buttons */
+
+.slider-card--current {
+    transform: scale(1);
+    z-index: 1;
+}
+
+.slider-card--previous {
+    transform: translateX(-30%) scale(0.9);
+}
+
+.slider-card--next {
+    transform: translateX(30%) scale(0.9);
+}
+
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.2);
+    color: var(--color-text-light);
+    border: none;
+    font-size: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: var(--button-border-radius);
+    cursor: pointer;
+}
+
+.slider-button:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.slider-button--left {
+    left: 0;
+}
+
+.slider-button--right {
+    right: 0;
+}
+
+/* MEDIUM SCREENS | SLIDER */
+@media only screen and (max-width: 960px) {
+    .card {
+        flex-basis: calc(50% - 1.5rem);
+        margin-inline: 0.75rem;
+    }
+}
+
+/* SMALL SCREENS | SLIDER */
+@media only screen and (max-width: 768px) {
+
+    .card {
+        flex-basis: calc(100% - 1.5rem);
+        margin-inline: 0.75rem;
+    }
+}
+
+
+
+
+/* SECTION: DE TEMPORADA (SEASONAL) */
+
+.seasonal-heading-line {
+    background-color: var(--color-primary-light);
+    height: 3rem;
+
+}
+
+.seasonal-heading-circle {
+    background-color: var(--color-primary-light);
+    height: 7.5rem;
+    width: 28rem;
+    border-radius: 35px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: auto;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.seasonal-heading-circle .section-heading {
+    color: var(--color-text-light);
+    margin: 0;
+}
+
+/* .slider {
+    max-height: 200px;
+} */
+
+#seasonal-slider {
+    position: relative;
+    background-color: var(--color-background-light-purple);
+}
+
+/* Make sure to crop images to the 2/1 aspect ratio! */
+.slider-content {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 9;
+    display: none;
+    animation: fadeEffect 2s;
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+.slider-content-active {
+    display: block;
+}
+
+.slider-content img.slider-img {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 2/1;
+    object-position: center center;
+}
+
+.slider-description {
+    /* background-color: black; */
+    color: white;
+    max-width: 400px;
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.slider-description img {
+    max-width: 12.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.slider-description h3 {
+    background-color: var(--color-primary-light);
+    border-radius: 20px;
+    padding: 1.25rem 2.5rem;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 300;
+    font-size: 2.5rem;
+}
+
+.slider-controls {
+    position: absolute;
+    bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.slider-btn {
+    background-color: rgba(255, 255, 255, 0.4);
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    position: relative;
+    z-index: 12;
+    cursor: pointer;
+    transition: background-color 300ms ease-in;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.slider-btn-active {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.slider-btn:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* SECTION: TESTIMONIALS */
+
+.testimonials-section {
+    color: var(--color-text-dark);
+    padding-block: var(--section-padding);
+    text-align: center;
+}
+
+.testimonial-content {
+    display: flex;
+    gap: 3rem;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    max-width: 60rem;
+    text-align: left;
+}
+
+.testimonial-img {
+    border-radius: 50%;
+    margin-inline: auto;
+    max-height: 18.75rem;
+    box-shadow: var(--box-shadow-light);
+}
+
+.testimonial-text {
+    text-align: inherit;
+}
+
+.testimonial-paragraph {
+    font-size: 1.3rem;
+    line-height: 2rem;
+    color: var(--color-text-dark);
+    margin-bottom: 30px;
+    text-align: inherit;
+}
+
+.testimonial-author {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.3rem;
+    color: var(--color-text-dark);
+}
+
+.testimonial-author-title {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* SECTION: FOOTER */
+
+.footer-1 {
+    background-color: var(--color-background-light-purple);
+    padding: var(--section-padding) 0;
+}
+
+.footer-1 .logo {
+    color: var(--color-text-primary-dark);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sitemap {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+}
+
+.sitemap div {
+    margin-inline: 60px;
+}
+
+.sitemap h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: 'Montserrat Semibold', sans-serif;
+    color: var(--color-text-primary-dark);
+    padding-inline: 20px;
+}
+
+.sitemap div a {
+    display: block;
+    width: 90%;
+    text-decoration: none;
+    color: var(--color-text-primary-dark);
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 2rem;
+    padding-inline: 20px;
+}
+
+.sitemap div a:hover {
+    background-color: var(--color-primary-light-hover);
+}
+
+/* SECTION: COPYRIGHT */
+
+.copyright {
+    background-color: var(--color-background-dark);
+    padding-block: 20px;
+}
+
+.copyright p {
+    color: var(--color-text-light);
+    text-align: center;
+}
+
+.copyright a {
+    color: var(--color-text-light-hover);
+    text-decoration: none;
+}
+
+.copyright a:hover {
+    color: var(--color-primary-hover);
+}
+
+
+@media only screen and (max-width: 992px) {
+
+    :root {
+        --section-padding: 6rem;
+    }
+
+    /* HEADER NAV */
+
+    .transparent-navigation li:not(:nth-child(-n+3)) {
+        display: none;
+    }
+
+    .transparent-navigation li.icon {
+        float: right;
+        display: block;
+    }
+
+
+
+    /* SEASONAL SECTION */
+
+    /* .slider-description {
+        max-width: 250px;
+    } */
+
+    .slider-description h3 {
+        padding: 20px 30px;
+        font-size: 2rem;
+    }
+
+    .slider-description img {
+        max-width: 175px;
+    }
+
+    /* FOOTER */
+
+    .sitemap div {
+        margin-inline: 30px;
+    }
+
+    .sitemap div a,
+    .sitemap div h3 {
+        padding-inline: 10px;
+
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    :root {
+        font-size: 14px;
+    }
+
+    .container {
+        max-width: 85%;
+    }
+
+    /* HEADER NAV */
+
+    .transparent-navigation li:not(.icon) {
+        display: none;
+    }
+    .transparent-navigation.responsive {position: relative;}
+    .transparent-navigation.responsive li.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .topnav.responsive li {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+
+    /* SEASONAL SECTION */
+
+    .seasonal-heading-circle {
+        height: 7.5rem;
+    }
+
+    /* .slider-content {
+        overflow: visible;
+    } */
+
+    .slider-description {
+        position: static;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        background-color: var(--color-primary-light);
+        padding-block-start: 2rem;
+        max-width: 100%;
+    }
+
+    .slider-description img {
+        padding: 0;
+        margin: 0;
+        max-width: 4rem;
+    }
+
+    .slider-description h3 {
+        background-color: transparent;
+        padding: 0;
+        font-size: 2.5rem;
+    }
+
+    .slider-controls {
+        position: relative;
+        bottom: 0rem;
+        left: 0%;
+        padding-top: 1.5rem;
+        transform: translateX(0);
+        /* background-color: var(--color-background-light-purple); */
+    }
+
+    .slider-btn {
+        height: 1.25rem;
+        width: 1.25rem;
+    }
+
+
+
+    /* TESTIMONIALS */
+    .testimonial-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .testimonial-img {
+        max-height: 220px;
+    }
+
+    /* FOOTER */
+    .footer-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .sitemap div {
+        margin-inline: 30px;
+    }
+
+    .sitemap div a {
+        padding-inline: 10px;
+
+    }
+
+
+}
+
+@media only screen and (max-width: 576px) {
+    :root {
+        font-size: 13px;
+    }
+
+    h1 {
+        font-size: 4.5rem;
+    }
+
+    h2 {
+        font-size: 3.5rem;
+    }
+
+    .section-heading {
+        font-size: 3.5rem;
+    }
+
+    /* SEASONAL SECTION */
+
+    .seasonal-heading-line {
+        height: 2rem;
+    }
+
+    .seasonal-heading-circle {
+        height: 5rem;
+        width: max-content;
+        padding-inline: 2.5rem;
+        max-width: 95%;
+        border-radius: 1.5rem;
+    }
+    .seasonal-heading-circle .section-heading {
+        font-size: 2.5rem;
+    }
+
+    .slider-description {
+        padding-block-start: 2rem;
+    }
+
+    .slider-description h3 {
+        font-size: 2.5rem;
+    }
+
+    /* TESTIMONIALS SECTION */
+
+    .testimonial-img {
+        max-height: 15rem;
+    }
+
+    /* FOOTER */
+
+    .sitemap {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+
+
+}
+
+
+/* SMALL SCREENS | MOBILE */
+@media only screen and (max-width: 360px) {
+:root{
+    font-size: 12px;
+}
+
+
+}
