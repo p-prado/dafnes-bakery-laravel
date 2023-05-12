@@ -13,11 +13,11 @@
         rel="stylesheet">
     <!-- ATTEMPT TO IMPORT FONT AWESOME -->
     <script src="https://kit.fontawesome.com/b4e0939b37.js" crossorigin="anonymous"></script>
-    <link rel="icon" type="image/x-icon" href="../assets/favicon.png">
-    <link rel="stylesheet" href="../styles/styles.css">
-    <link rel="stylesheet" href="../styles/header.css">
-    <link rel="stylesheet" href="../styles/dashboard.css">
-</head>
+    <link rel="icon" type="image/x-icon" href="{{ asset('resources/assets/favicon.png') }}">
+    <link rel="stylesheet" href="{{ asset('resources/css/styles.css') }}">
+    <link rel="stylesheet" href="{{ asset('resources/css/dashboard.css') }}">
+    <link rel="stylesheet" href="{{ asset('resources/css/header.css') }}">
+    </head>
 <body>
 <!-- SECTION: HEADER -->
 <header>

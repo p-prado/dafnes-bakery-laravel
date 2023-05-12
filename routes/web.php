@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CategoryController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,13 +16,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('index');
 });
 
 Route::view('/login', 'login');
 
-Route::view('/home', 'home', ['name' => 'John']);
-
 Route::view('/category/{title}', 'category');
 
-Route::view('/productos/{productTitle}', 'product');
+Route::view('/dashboard', 'dashboard');
+
+/* Productos */
+// Route::view('/productos/{productTitle}', 'product');
+
+Route::get('/productos', [ProductController::class, 'index']);
+// Route::get('/photos/popular', [PhotoController::class, 'popular']);
+// Route::resource('products', [ProductController::class]);
+
+
+Route::resource('category', CategoryController::class);
