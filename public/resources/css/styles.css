@@ -157,6 +157,11 @@ h2.section-heading {
 }
 
 /* BUTTONS */
+button.button-primary {
+    border: none;
+    cursor: pointer;
+}
+
 .button-primary {
     display: inline-block;
     text-decoration: none;

@@ -12,4 +12,9 @@ class Product extends Model
     protected $table = 'product';
     protected $primaryKey = 'idproduct';
     public $timestamps = false;
+
+    public function category()
+    {
+        return $this->belongsTo('App\Models\Category', 'idcroduct', 'idcategory');
+    }
 }

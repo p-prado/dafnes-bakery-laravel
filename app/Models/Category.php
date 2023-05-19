@@ -12,4 +12,9 @@ class Category extends Model
     protected $table = 'categories';
     protected $primaryKey = 'idcategory';
     public $timestamps = false;
+
+    public function products()
+    {
+        return $this->hasMany('App\Models\Product', 'idcategory', 'idcategory');
+    }
 }

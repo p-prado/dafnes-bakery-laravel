@@ -59,3 +59,6 @@ h1.product-title {
     font-size: 1.5rem;
 }
 
+.product-servings-unit {
+    text-transform: capitalize;
+}

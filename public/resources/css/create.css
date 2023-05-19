@@ -1,0 +1,55 @@
+section {
+    padding-block: var(--section-padding);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 600px;
+    margin: auto;
+    font-family: var(--font-family-body);
+    font-size: var(--size-main-body-text);
+}
+form h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+input,textarea,select {
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    border: none;
+}
+
+input:focus-visible {
+    outline-color: var(--color-primary);
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.input-row {
+    gap: 2rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.input-row .input-group {
+    width: 50%;
+}
+
+.length {
+    text-align: right;
+}
+
+.count.bad {
+    color: red;
+}
+
+.count.ok {
+    color: green;
+}

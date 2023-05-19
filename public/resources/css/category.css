@@ -24,6 +24,12 @@
 
 
 /* PRODUCT CARDS */
+.product-card-link{
+    text-decoration: none;
+    color: inherit;
+}
+
+
 .product-card-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;

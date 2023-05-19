@@ -21,16 +21,21 @@ Route::get('/', function () {
 
 Route::view('/login', 'login');
 
-Route::view('/category/{title}', 'category');
+/* Category */
+Route::get('/categoria/create', [CategoryController::class, 'create']);
+Route::get('/categoria/{category}', [CategoryController::class, 'show']);
+Route::post('/categoria', [CategoryController::class, 'store']);
 
-Route::view('/dashboard', 'dashboard');
+/* Dashboard */
+Route::get('/dashboard/categorias',[CategoryController::class, 'dashboardIndex']);
+Route::get('/dashboard/productos', [ProductController::class, 'dashboardIndex']);
 
 /* Productos */
-// Route::view('/productos/{productTitle}', 'product');
-
 Route::get('/productos', [ProductController::class, 'index']);
-// Route::get('/photos/popular', [PhotoController::class, 'popular']);
-// Route::resource('products', [ProductController::class]);
+Route::get('/productos/create', [ProductController::class, 'create']);
+Route::get('/productos/{product}', [ProductController::class, 'show']);
+Route::post('/productos', [ProductController::class, 'store']);
+// TODO: create product - add get and post
 
 
 Route::resource('category', CategoryController::class);

@@ -8,7 +8,7 @@
                     <a href="/category/pasteles">Pasteles</a>
                     <a href="/category/pies">Pies</a>
                     <a href="/category/galletas">Galletas</a>
-                    <a href="/category/otros">Otros</a>
+                    <a href="/dashboard/productos">Admin Dashboard</a>
                 </div>
                 <div class="sitemap-2">
                     <h3>Contacto</h3>
