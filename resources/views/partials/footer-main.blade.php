@@ -5,9 +5,9 @@
             <div class="sitemap">
                 <div class="sitemap-1">
                     <a href="/">Inicio</a>
-                    <a href="/category/pasteles">Pasteles</a>
-                    <a href="/category/pies">Pies</a>
-                    <a href="/category/galletas">Galletas</a>
+                    <a href="/categoria/1">Pasteles</a>
+                    <a href="/categoria/2">Pies</a>
+                    <a href="/categoria/3">Galletas</a>
                     <a href="/dashboard/productos">Admin Dashboard</a>
                 </div>
                 <div class="sitemap-2">

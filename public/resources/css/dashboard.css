@@ -56,6 +56,22 @@ td.actions {
     text-align: center;
 }
 
-td.actions a:hover {
+td.actions .action-icon {
+    color: var(--color-primary);
+    background-color: transparent;
+}
+
+td.actions .action-icon:hover {
     color: var(--color-primary-light);
+}
+
+a.action-icon:visited {
+    color: var(--color-primary);
+}
+
+.trashButton{
+    background-color: transparent;
+    border: none;
+    display: inline;
+    cursor: pointer;
 }

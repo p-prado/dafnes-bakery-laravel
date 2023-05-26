@@ -26,7 +26,7 @@
         <div class="container" id="product-section">
             <h1 class="product-title">{{ $product->name }}</h1>
             <div class="product-container">
-                <div class="product-img-container"><img draggable="false" class="product-img" src="{{ $product->image_url }}" alt="Tartaleta de Frutas"></div>
+                <div class="product-img-container"><img draggable="false" class="product-img" src="{{ asset('$product->image_url') }}" alt="Tartaleta de Frutas"></div>
                 <div class="product-info">
                     <p>{{$product->description}}</p>
                     <p><span class="product-servings-unit">{{ $product->servings_unit }}:</span> <span id="product-servings">{{ $product->servings }}</span></p>

@@ -65,13 +65,14 @@ class ProductController extends Controller
 
 
         // If there is an image file in the request, upload it and store its path
-        // if ($request->hasFile('image')) {
-        //     $image = $request->file('image');
-        //     $image_name = time() . '.' . $image->getClientOriginalExtension();
-        //     $image_path = 'uploads/products/' . $image_name;
-        //     $image->move(public_path('uploads/products'), $image_name);
-        //     $product->image = $image_path;
-        // }
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $image_name = time() . '.' . $image->getClientOriginalExtension();
+            $image_path = 'uploads/products/' . $image_name;
+            $image->move(public_path('uploads/products'), $image_name);
+            $product->image_url = $image_path;
+            $product->description = $product->image_url;
+        }
 
         // Save the product to the database
         $product->save();
@@ -96,15 +97,31 @@ class ProductController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $product = Product::find($id);
+        $categories = Category::all();
+
+        return view('products.edit', compact('product', 'categories'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request)
     {
-        //
+        $product = Product::find($request->idproduct);
+        $product->sku = $request->sku;
+        $product->name = $request->name;
+        $product->description = $request->description;
+        $product->idcategory = $request->idcategory;
+        $product->price = $request->price;
+        $product->servings_unit = $request->servings_unit;
+        $product->servings = $request->servings;
+        $product->featured = $request->featured;
+        // $product->image_url = $request->image_url;
+
+        $product->save();
+
+        return redirect('/dashboard/productos');
     }
 
     /**
@@ -112,6 +129,10 @@ class ProductController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $product = Product::find($id);
+
+        $product->delete();
+
+        return redirect('/dashboard/productos');
     }
 }
