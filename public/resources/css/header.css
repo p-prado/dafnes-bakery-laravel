@@ -4,10 +4,16 @@ header {
     color: var(--color-text-light);
 }
 
-.transparent-navigation a:hover/*:not(.active)*/ {
+.transparent-navigation a:hover {
     background-color: rgba(255,255,255,0.1);
     border-bottom: 3px solid rgba(255, 255, 255, 0.7);
     text-shadow: none;
+}
+
+.transparent-navigation a:active {
+    background-color: var(--color-primary-transparent);
+    border-bottom: 3px solid var(--color-primary);
+
 }
 
 body{

@@ -1,4 +1,4 @@
-header{
+header {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -21,7 +21,7 @@ h1 {
 }
 
 a.button-primary {
-    float:right;
+    float: right;
     margin-top: -4rem;
     padding: 10px 20px;
     font-size: calc(var(--size-main-body-text) - 0.3rem);
@@ -32,7 +32,7 @@ table {
     width: 100%;
 }
 
-thead{
+thead {
     background-color: var(--color-primary);
     color: var(--color-text-light);
 }
@@ -40,11 +40,13 @@ thead{
 tbody tr:nth-child(odd) {
     background-color: var(--color-background-light);
 }
+
 tbody tr:nth-child(even) {
     background-color: white;
 }
 
-th, td {
+th,
+td {
     border: 1px solid #cccccc;
     margin: 0;
     padding: 10px;
@@ -69,7 +71,7 @@ a.action-icon:visited {
     color: var(--color-primary);
 }
 
-.trashButton{
+.trashButton {
     background-color: transparent;
     border: none;
     display: inline;

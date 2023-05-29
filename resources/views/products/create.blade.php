@@ -17,12 +17,12 @@
     <link rel="stylesheet" href="{{ asset('resources/css/create.css') }}">
     <link rel="icon" type="image/x-icon" href="{{ asset('resources/assets/favicon.png') }}">
     <script src="{{ asset('resources/js/nav.js') }}" defer></script>
+    <script src="{{ asset('resources/js/image_upload.js') }}" defer></script>
 </head>
 
 <body>
 <!-- SECTION: HEADER -->
 @include('partials.header')
-
 
 
 <main>
@@ -84,9 +84,12 @@
                         </select>
                     </div>
                     <div class="input-group">
-                        <label for="image" disabled>Imagen del Producto</label>
-                        <input name="image" type="file">
+                        <label for="image">Imagen del Producto</label>
+                        <input id="imageInput" name="image" type="file" accept=".jpg, .jpeg, .png, .webp">
                     </div>
+                </div>
+                <div id="imagePreview" class="image-preview">
+                    <p>No files currently selected for upload</p>
                 </div>
 
                 <button class="button-primary" type="submit">Crear</button>

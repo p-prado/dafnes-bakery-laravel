@@ -48,7 +48,7 @@
                             </div>
                             <div class="card-body">
                                 <h3 class="card-title">{{ $product->name }}</h3>
-                                <p class="price">{{ $product->price }}</p>
+                                <p class="price">Q{{ $product->price }}</p>
                             </div>
                         </div>
                     </a>

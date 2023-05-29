@@ -67,6 +67,7 @@ h6 {
     --font-family-header: 'Dancing Script', cursive;
     --font-family-body: 'Montserrat', sans-serif;
     --color-primary: #3e064c;
+    --color-primary-transparent: hsla(288, 85%, 16%, 0.2);
     --color-primary-light: #ae8da7;
     --color-primary-light-hover: #cfafc8;
     --color-primary-hover: #713181;

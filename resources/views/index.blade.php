@@ -48,7 +48,7 @@
                                 <h3 class="card-title">Tartaleta de Frutas</h3>
                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At autem iste
                                     molestias nisi, vel ex optio rem cum id ratione nobis distinctio</p>
-                                <a href="/productos/pastel-de-chocolate" class="button-primary card-cta">Comprar</a>
+                                <a href="/productos/1" class="button-primary card-cta">Comprar</a>
                             </div>
                         </div>
 
@@ -61,7 +61,7 @@
                                 <h3 class="card-title">Pastel Tiramisú</h3>
                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At autem iste
                                     molestias nisi, vel ex optio rem cum id ratione nobis distinctio</p>
-                                <a href="/productos/pastel-tiramisu" class="button-primary card-cta">Comprar</a>
+                                <a href="/productos/2" class="button-primary card-cta">Comprar</a>
                             </div>
                         </div>
 
@@ -73,7 +73,7 @@
                                 <h3 class="card-title">Pastel de Fresa</h3>
                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At autem iste
                                     molestias nisi, vel ex optio rem cum id ratione nobis distinctio</p>
-                                <a href="/productos/pastel-de-fresa" class="button-primary card-cta">Comprar</a>
+                                <a href="/productos/3" class="button-primary card-cta">Comprar</a>
                             </div>
                         </div>
 
@@ -86,7 +86,7 @@
                                 <h3 class="card-title">Pie de Manzana</h3>
                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At autem iste
                                     molestias nisi, vel ex optio rem cum id ratione nobis distinctio</p>
-                                <a href="/productos/pie-de-manzana" class="button-primary card-cta">Comprar</a>
+                                <a href="/productos/4" class="button-primary card-cta">Comprar</a>
                             </div>
                         </div>
 
@@ -99,7 +99,7 @@
                                 <h3 class="card-title">Chocolate Chip Cookies</h3>
                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At autem iste
                                     molestias nisi, vel ex optio rem cum id ratione nobis distinctio</p>
-                                <a href="/productos/galletas-de-chocolate-chip" class="button-primary card-cta">Comprar</a>
+                                <a href="/productos/5" class="button-primary card-cta">Comprar</a>
                             </div>
                         </div>
 
@@ -112,7 +112,7 @@
                                 <h3 class="card-title">Baklava</h3>
                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At autem iste
                                     molestias nisi, vel ex optio rem cum id ratione nobis distinctio</p>
-                                <a href="/productos/baklava" class="button-primary card-cta">Comprar</a>
+                                <a href="/productos/6" class="button-primary card-cta">Comprar</a>
                             </div>
                         </div>
 
@@ -125,7 +125,7 @@
                                 <h3 class="card-title">Cheesecake</h3>
                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At autem iste
                                     molestias nisi, vel ex optio rem cum id ratione nobis distinctio</p>
-                                <a href="/productos/cheesecake" class="button-primary card-cta">Comprar</a>
+                                <a href="/productos/7" class="button-primary card-cta">Comprar</a>
                             </div>
                         </div>
 

@@ -3,7 +3,7 @@
     <h2 class="logo"><a href="/">Dafne's Bakery</a></h2>
     <nav>
         <ul id="transparent-navigation" class="transparent-navigation">
-            <li><a href="/"  class="active">Inicio</a></li>
+            <li><a href="/">Inicio</a></li>
             <li><a href="/categoria/1">Pasteles</a></li>
             <li><a href="/categoria/2">Pies</a></li>
             <li><a href="/categoria/3">Galletas</a></li>

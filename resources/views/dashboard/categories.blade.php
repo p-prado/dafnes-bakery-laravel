@@ -25,8 +25,8 @@
     </head>
 <body>
 <!-- SECTION: HEADER -->
-@include('partials.header');
-@include('dashboard.menu');
+@include('partials.header')
+@include('dashboard.menu')
     <main>
         <div class="container">
             <h1>Categorías</h1>
@@ -56,8 +56,8 @@
         </div>
     </main>
 
+    <!-- Modal -->
     @foreach ($categories as $category)
-        <!-- Modal -->
         <div class="modal fade" id="modal-delete-{{ $category->idcategory }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">

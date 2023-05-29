@@ -53,3 +53,16 @@ input:focus-visible {
 .count.ok {
     color: green;
 }
+
+.image-preview {
+    background-color: blanchedalmond;
+}
+
+.image-preview ul{
+    list-style: none;
+}
+
+.image-preview-img {
+    height: 50px;
+    float: right;
+}
