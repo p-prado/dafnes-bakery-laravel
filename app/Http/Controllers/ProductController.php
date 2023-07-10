@@ -8,6 +8,13 @@ use App\Models\Category;
 
 class ProductController extends Controller
 {
+
+    public function home()
+    {
+        $products = Product::where('featured', 1)->get();
+        return view('home', compact('products'));
+    }
+
     /**
      * Display a listing of the resource.
      */
@@ -71,7 +78,6 @@ class ProductController extends Controller
             $image_path = 'uploads/products/' . $image_name;
             $image->move(public_path('uploads/products'), $image_name);
             $product->image_url = $image_path;
-            $product->description = $product->image_url;
         }
 
         // Save the product to the database

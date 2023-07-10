@@ -1,31 +1,16 @@
-<!DOCTYPE html>
-<html lang="es">
+@extends('layout')
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+@section('title')
     <title>Editar | {{ $product->name }}</title>
-    <!-- IMPORT FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('resources/css/styles.css') }}">
-    <link rel="stylesheet" href="{{ asset('resources/css/header.css') }}">
+@endsection
+
+@section('imports')
     <link rel="stylesheet" href="{{ asset('resources/css/create.css') }}">
-    <link rel="icon" type="image/x-icon" href="{{ asset('resources/assets/favicon.png') }}">
-    <script src="{{ asset('resources/js/nav.js') }}" defer></script>
-</head>
+@endsection
 
-<body>
-<!-- SECTION: HEADER -->
-@include('partials.header')
-
-
-
-<main>
+@section('content')
+    
+    @include('partials.header')
     <section>
         <div class="container">
             <form action="/productos" method="post">
@@ -95,17 +80,9 @@
             </form>
         </div>
     </section>
-</main>
+    
+@endsection
 
-
-
-    <!-- SECTION: FOOTER -->
-    <footer>
-        @include('partials.footer-main')
-        @include('partials.footer-copy')
-    </footer>
+@section('footer-imports')
     <script src="{{ asset('resources/js/count.js') }}" defer></script>
-
-</body>
-
-</html>
+@endsection
